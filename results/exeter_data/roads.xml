@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <osm version="0.6" generator="Overpass API 0.7.58.3 b33c3320">
 <note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
-<meta osm_base="2022-07-03T16:33:52Z"/>
+<meta osm_base="2022-07-05T17:10:34Z"/>
 
   <node id="20986226" lat="50.7081471" lon="-3.5406178">
     <tag k="highway" v="crossing"/>
@@ -21560,6 +21560,7 @@
     <nd ref="36672400"/>
     <nd ref="36672492"/>
     <nd ref="1483498377"/>
+    <tag k="cycleway:left" v="no"/>
     <tag k="highway" v="unclassified"/>
     <tag k="lane_markings" v="no"/>
     <tag k="lit" v="yes"/>
@@ -35953,6 +35954,7 @@
     <nd ref="1483498380"/>
     <tag k="highway" v="trunk"/>
     <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
     <tag k="maxspeed" v="30 mph"/>
     <tag k="maxspeed:type" v="sign"/>
     <tag k="name" v="Bonhay Road"/>
