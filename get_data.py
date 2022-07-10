@@ -131,6 +131,11 @@ def get_worldpop_data(geojson_file, year=2010, output_file='pop.geojson', delete
     total_population = 0
     pbar = tqdm(geojson_data['features'])
     for grid in pbar:
+
+        if 'population' in grid['properties'].keys():
+            total_population += grid['properties']['population']
+            continue
+        
         str_feature = json.dumps(grid)
         str_feature = '{"type":"FeatureCollection","features":['+str_feature+']}'
         
@@ -174,7 +179,10 @@ def get_worldpop_data(geojson_file, year=2010, output_file='pop.geojson', delete
                     exit()
         else:
             print('\nError:\n - '+request_response['error_description'])
+            with open(output_file, 'w') as output:
+                json.dump(geojson_data, output, indent=4)
             exit()
+
         grid['properties']['population'] = grid_population
         total_population += grid_population
     
@@ -188,7 +196,7 @@ def get_worldpop_data(geojson_file, year=2010, output_file='pop.geojson', delete
     summary_file = filepath + '/' + filepath.split('/')[-1] + '_summary.md'
     if path.exists(summary_file):
         with open(summary_file, 'a') as f:
-            f.write("\n\n## Population Statistics:\n - Total: {0}\n - Average: {1}".format(total_population, round(total_population / len(geojson_data['features']), 2)))
+            f.write("\n\n## Population Statistics:\n - Total: {0}\n - Average: {1}".format(round(total_population, 2), round(total_population / len(geojson_data['features']), 2)))
 
 def get_road_layout(bounds, output_file='roads.xml'):
     """

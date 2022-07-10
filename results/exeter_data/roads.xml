@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <osm version="0.6" generator="Overpass API 0.7.58.3 b33c3320">
 <note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
-<meta osm_base="2022-07-05T17:10:34Z"/>
+<meta osm_base="2022-07-10T17:40:39Z"/>
 
   <node id="20986226" lat="50.7081471" lon="-3.5406178">
     <tag k="highway" v="crossing"/>
@@ -4103,6 +4103,7 @@
   </node>
   <node id="259830047" lat="50.7200452" lon="-3.4963183"/>
   <node id="259830048" lat="50.7198112" lon="-3.4956331">
+    <tag k="access" v="private"/>
     <tag k="barrier" v="gate"/>
   </node>
   <node id="259830049" lat="50.7173133" lon="-3.4990778"/>

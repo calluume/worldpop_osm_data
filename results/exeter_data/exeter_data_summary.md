@@ -12,5 +12,5 @@
  - Width: 102.09m
 
 ## Population Statistics:
- - Total: 79053.93
- - Average: 46.72
+ - Total: 76639.48
+ - Average: 45.3
